@@ -1,0 +1,227 @@
+{
+    "nodes": [
+        {
+            "nodeId": "9dc9cee9-0655-4f22-ad20-4331484e5601",
+            "name": "Inactive",
+            "length": 0,
+            "x": -564,
+            "y": -48
+        },
+        {
+            "nodeId": "5980bf5b-ea5c-412a-bbbb-34ac3ae37e4c",
+            "name": "Active",
+            "length": 5000,
+            "x": -412,
+            "y": -49
+        },
+        {
+            "nodeId": "1832008c-e04a-4b6d-90c3-f7b13272792e",
+            "name": "InRide",
+            "length": 5000,
+            "x": -148,
+            "y": -47
+        },
+        {
+            "nodeId": "ddeb77b4-59d5-4f11-aceb-ef4f963d3407",
+            "name": "InRide[Unknown]",
+            "length": 0,
+            "x": 69,
+            "y": -47
+        },
+        {
+            "nodeId": "42e10c39-c0db-4c2d-a4e0-1dc48d91856d",
+            "name": "Active[Unknown]",
+            "length": 0,
+            "x": -498,
+            "y": 238
+        }
+    ],
+    "transitions": [
+        {
+            "transitionId": "d8df3402-b520-4423-9115-1c1db34f92ad",
+            "fromNodeId": "9dc9cee9-0655-4f22-ad20-4331484e5601",
+            "toNodeId": "5980bf5b-ea5c-412a-bbbb-34ac3ae37e4c",
+            "priority": 0,
+            "mayInterrupt": true,
+            "controlPointPosition": {
+                "x": -487,
+                "y": -101.66666666666669
+            },
+            "condition": {
+                "type": 5,
+                "parameters": {
+                    "parameterName": "EnableVehicle"
+                }
+            }
+        },
+        {
+            "transitionId": "1e179bd3-e9ca-4071-895e-d33fcf1aec4c",
+            "fromNodeId": "5980bf5b-ea5c-412a-bbbb-34ac3ae37e4c",
+            "toNodeId": "9dc9cee9-0655-4f22-ad20-4331484e5601",
+            "priority": 1,
+            "mayInterrupt": true,
+            "controlPointPosition": {
+                "x": -494,
+                "y": 15.666666666666686
+            },
+            "condition": {
+                "type": 5,
+                "parameters": {
+                    "parameterName": "DisableVehicle"
+                }
+            }
+        },
+        {
+            "transitionId": "f2da0ff2-7076-44f4-95d3-8bf177e96bba",
+            "fromNodeId": "5980bf5b-ea5c-412a-bbbb-34ac3ae37e4c",
+            "toNodeId": "1832008c-e04a-4b6d-90c3-f7b13272792e",
+            "priority": 1,
+            "mayInterrupt": true,
+            "controlPointPosition": {
+                "x": -286,
+                "y": 27.66666666666667
+            },
+            "condition": {
+                "type": 1,
+                "parameters": {
+                    "parameterName": "HasPassenger",
+                    "expectedValue": "true"
+                }
+            }
+        },
+        {
+            "transitionId": "df0a41b7-aa5d-4e30-a44a-d2dadc3193c7",
+            "fromNodeId": "1832008c-e04a-4b6d-90c3-f7b13272792e",
+            "toNodeId": "5980bf5b-ea5c-412a-bbbb-34ac3ae37e4c",
+            "priority": 1,
+            "mayInterrupt": true,
+            "controlPointPosition": {
+                "x": -278,
+                "y": -141.33333333333331
+            },
+            "condition": {
+                "type": 1,
+                "parameters": {
+                    "parameterName": "HasPassenger",
+                    "expectedValue": "false"
+                }
+            }
+        },
+        {
+            "transitionId": "68ef6eca-0bfe-4776-af13-450e60da5826",
+            "fromNodeId": "1832008c-e04a-4b6d-90c3-f7b13272792e",
+            "toNodeId": "ddeb77b4-59d5-4f11-aceb-ef4f963d3407",
+            "priority": 2,
+            "mayInterrupt": true,
+            "controlPointPosition": {
+                "x": -55,
+                "y": -122.33333333333331
+            },
+            "condition": {
+                "type": 0,
+                "parameters": {}
+            }
+        },
+        {
+            "transitionId": "83ade5a7-e6dc-4d44-9da1-84b54153f3de",
+            "fromNodeId": "1832008c-e04a-4b6d-90c3-f7b13272792e",
+            "toNodeId": "1832008c-e04a-4b6d-90c3-f7b13272792e",
+            "priority": 0,
+            "mayInterrupt": true,
+            "controlPointPosition": {
+                "x": -150,
+                "y": 39.66666666666667
+            },
+            "condition": {
+                "type": 5,
+                "parameters": {
+                    "parameterName": "SendLocation"
+                }
+            }
+        },
+        {
+            "transitionId": "0a867763-fc2c-4f67-9709-bfdaba2fa2b8",
+            "fromNodeId": "ddeb77b4-59d5-4f11-aceb-ef4f963d3407",
+            "toNodeId": "1832008c-e04a-4b6d-90c3-f7b13272792e",
+            "priority": 0,
+            "mayInterrupt": true,
+            "controlPointPosition": {
+                "x": -58,
+                "y": 26.666666666666664
+            },
+            "condition": {
+                "type": 5,
+                "parameters": {
+                    "parameterName": "SendLocation"
+                }
+            }
+        },
+        {
+            "transitionId": "ad291001-3dc4-4381-b513-0bf8e88ccaf6",
+            "fromNodeId": "ddeb77b4-59d5-4f11-aceb-ef4f963d3407",
+            "toNodeId": "42e10c39-c0db-4c2d-a4e0-1dc48d91856d",
+            "priority": 0,
+            "mayInterrupt": true,
+            "controlPointPosition": {
+                "x": -99,
+                "y": 164.6666666666667
+            },
+            "condition": {
+                "type": 1,
+                "parameters": {
+                    "parameterName": "HasPassenger",
+                    "expectedValue": "false"
+                }
+            }
+        },
+        {
+            "transitionId": "ab46d47a-bad9-4032-9637-e46edcb6da20",
+            "fromNodeId": "5980bf5b-ea5c-412a-bbbb-34ac3ae37e4c",
+            "toNodeId": "5980bf5b-ea5c-412a-bbbb-34ac3ae37e4c",
+            "priority": 2,
+            "mayInterrupt": true,
+            "controlPointPosition": {
+                "x": -412,
+                "y": -160.66666666666674
+            },
+            "condition": {
+                "type": 5,
+                "parameters": {
+                    "parameterName": "SendLocation"
+                }
+            }
+        },
+        {
+            "transitionId": "97b6e8d6-1041-42d0-99cd-03db0a4b39c9",
+            "fromNodeId": "5980bf5b-ea5c-412a-bbbb-34ac3ae37e4c",
+            "toNodeId": "42e10c39-c0db-4c2d-a4e0-1dc48d91856d",
+            "priority": 0,
+            "mayInterrupt": true,
+            "controlPointPosition": {
+                "x": -405,
+                "y": 115.33333333333327
+            },
+            "condition": {
+                "type": 0,
+                "parameters": {}
+            }
+        },
+        {
+            "transitionId": "b1801f93-ebc7-4f53-b626-e455ffc4f1db",
+            "fromNodeId": "42e10c39-c0db-4c2d-a4e0-1dc48d91856d",
+            "toNodeId": "5980bf5b-ea5c-412a-bbbb-34ac3ae37e4c",
+            "priority": 0,
+            "mayInterrupt": true,
+            "controlPointPosition": {
+                "x": -509,
+                "y": 104.33333333333334
+            },
+            "condition": {
+                "type": 5,
+                "parameters": {
+                    "parameterName": "SendLocation"
+                }
+            }
+        }
+    ]
+}

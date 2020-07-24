@@ -1,0 +1,7 @@
+- present a public API to get price directly from user and return price object with TTL 
+- The ride can be create with price object only
+- The price function get what ever information it want like src point, dst point, request type car, passenger status, dispatch state, time and so on
+- The price method can be implement with user
+- When a ride create; the price object must be eliminated
+- The price object must be deleted if there is no dispatch reference id it has
+- At the end of dispatch; the price object must be eliminated

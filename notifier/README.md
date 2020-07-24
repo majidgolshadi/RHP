@@ -1,0 +1,1 @@
+This service is responsible for send email, sms, FCM and other types of notifications

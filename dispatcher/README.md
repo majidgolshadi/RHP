@@ -1,0 +1,1 @@
+The dispatcher service can sort, filter and dispatch to the online vehicle that get from tracker service
